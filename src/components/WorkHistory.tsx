@@ -2,18 +2,18 @@ import { useState } from "react"
 import { WorkHistoryModel } from "../models"
 import Period from "./Period"
 
-export function WorkHistory({ list, setList }: { list: Array<WorkHistoryModel>, setList: any }) {
+export function WorkHistory({ list }: { list: Array<WorkHistoryModel> }) {
 
     return (
         <div className="row">
             <div className="col-6 p-2">
-                {list.map((item) => <WorkHistoryItem key={item.org} historyItem={item} setHistoryItem={() => setList(item)}></WorkHistoryItem>)}
+                {list.map((item) => <WorkHistoryItem key={item.org} historyItem={item}></WorkHistoryItem>)}
             </div>
         </div>
     )
 }
 
-export function WorkHistoryItem({ historyItem, setHistoryItem }: { historyItem: WorkHistoryModel, setHistoryItem: any }) {
+export function WorkHistoryItem({ historyItem }: { historyItem: WorkHistoryModel }) {
 
     const [canShowDesc, setCanShowDesc] = useState(false);
 
@@ -39,7 +39,7 @@ export function WorkHistoryItem({ historyItem, setHistoryItem }: { historyItem: 
                 <div>
                     {roles}
                 </div>
-                <button type="button" className="btn btn-link" onClick={() => setHistoryItem(historyItem) }>Show description</button>
+                <button type="button" className="btn btn-link" onClick={() => setCanShowDesc(!canShowDesc) }>Show description</button>
                 {canShowDesc && !!historyItem.desc &&
                     <div>
                         <div>Description</div>

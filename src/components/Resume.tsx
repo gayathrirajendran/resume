@@ -12,16 +12,6 @@ export default function Resume() {
 
     useEffect(() => { fetchData() }, []);
 
-    function updateList(item: WorkHistoryModel) {
-        data!.workHistory = data!.workHistory.map((wItem) => {
-            if(wItem.org === item.org) {
-                wItem.isDescShown = !wItem.isDescShown;
-                return wItem;
-            } else return wItem;
-        })
-        setData(structuredClone(data));
-    }
-
     return (
         <main className="container-fluid my-2">
             {!!data &&
@@ -35,7 +25,7 @@ export default function Resume() {
                     <GenericList list={data.skills} className="badge bg-secondary"></GenericList>
                     
                     <div>Work history:</div>
-                    <WorkHistory list={data.workHistory} setList={updateList}></WorkHistory>
+                    <WorkHistory list={data.workHistory}></WorkHistory>
                 </>
             }
         </main>
