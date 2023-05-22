@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .welcome-class {
     font: Arial;
     font-weight: 400;
     background-color: aqua;
 }
+
