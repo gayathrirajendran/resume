@@ -1,6 +1,65 @@
 {
     "name": "Gayathri Rajendran",
-    "skills": ["Angular", "Typescript", "HTML/CSS", "React", "Next JS"],
+    "skills": [
+        "Angular",
+        "Typescript",
+        "HTML/CSS",
+        "React JS"
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Technology",
+            "college": "SSN College of Engineering",
+            "period": {
+                "startTime": "2007-12-31T18:30:00.000Z",
+                "endTime": "2011-12-31T18:30:00.000Z"
+            }
+        }
+    ],
+    "workHistory": [
+        {
+            "org": "ICU Medical",
+            "period": {
+                "startTime": "2022/10/03"
+            },
+            "roles": [
+                "Technical Lead"
+            ],
+            "isCurrentJob": true,
+            "desc": "Am leading the development of the frontend that serves a health care product. I come up with the architecture/technical design of the UI product, decide on resuable parts, setup publish strategies for packages, deciding on the shape and code organization for the micro frontend and get involved in the actual translation of design to code."
+        },
+        {
+            "org": "Intellect Design Arena",
+            "period": {
+                "endTime": "2022/09/21",
+                "startTime": "2017/10/31"
+            },
+            "roles": ["Senior Project Manager", "Senior Project Lead", "Team lead"],
+            "desc": "Led the development of a design system for a corporate banking product. Identified patterns and came up with technical solutions that would abstract repetitive tasks and chores into reusable atomic particles and thus provided an assembly line for implementation across different clients and requirements"
+        },
+        {
+            "org": "Cognizant",
+            "period": {
+                "startTime": "2022/10/03",
+                "endTime": "2017/10/28"
+            },
+            "roles": [
+                "Technology Lead"
+            ],
+            "desc": "Worked as a dev in a team of UI developers to implement client requirements. Developed Maps, Graphs, Dashboards and Kiosk displays for different views were developed. Views were integrated with REST APIs"
+        },
+        {
+            "org": "Infosys",
+            "period": {
+                "startTime": "2012/09/24",
+                "endTime": "2014/08/20"
+            },
+            "roles": [
+                "Senior Systems Engineer", "Systems Engineer", "Systems Engineer Trainee"
+            ],
+            "desc": "As a dev, contributed to web applications using HTML/CSS, jquery, Java (struts). Migrated applications that were using Flash and Actionscript, to the then recent HTML jquery implemented web pages."
+        }
+    ],
     "contactDetails": {
         "mobile": "+91 884342452",
         "email": "gayathriraj.vlr@gmail.com"
