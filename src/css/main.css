@@ -1,10 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --app-bg-color: #f8f8f8;
+    --header-bg-color: #f3f3f3;
+    --special-text-color: #659D89;
+    --link-color: slategrey;
+    --link-hover-color: black;
+    --header-text-color: gray;
+    --primary-text-color: #555;
 
-.welcome-class {
-    font: Arial;
-    font-weight: 400;
-    background-color: aqua;
+    --bs-link-color: var(--link-color);
+    --bs-link-hover-color: var(--link-hover-color);
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    background-color: var(--app-bg-color);
+    color: var(--primary-text-color)
+}
+
+.header {
+    background-color: var(--header-bg-color)
+}
+
+.header div,
+section {
+    color: var(--header-text-color);
+}
+
+.brand {
+    color: var(--special-text-color);
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.heading {
+    font-weight: 300;
+}
+
+p {
+    font-weight: 400;
+}
+
+.container>article {
+    margin-block: 30px;
+}
+
+.description {
+    background: white;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.linkedin-blue {
+    color: #0077b5;
+}

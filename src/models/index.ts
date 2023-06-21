@@ -1,9 +1,18 @@
 export interface ResumeModel {
     name: string;
+    summary: string;
+    socialMedia: SocialMediaModel[]
+    occupation: string;
     skills: Array<string>,
     education: Array<EducationInfoModel>,
     workHistory: Array<WorkHistoryModel>,
     contactDetails: ContactInfoModel;
+}
+
+export interface SocialMediaModel {
+    link: string;
+    network: 'linkedIn' | 'instagram' | 'twitter';
+    title: string;
 }
 
 export interface WorkHistoryModel {
@@ -12,7 +21,6 @@ export interface WorkHistoryModel {
     period: PeriodModel,
     desc: string;
     isCurrentJob?: boolean;
-    isDescShown: boolean;
 }
 
 export interface ContactInfoModel {

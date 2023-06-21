@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
-import ContactDetails from "./ContactDetails";
 import GenericList from "./GenericList";
-import { ResumeModel, WorkHistoryModel } from "../models";
+import { ResumeModel } from "../models";
 import { WorkHistory } from "./WorkHistory";
+import ContactUs from "./ContactUs";
+import Header from "./Header";
+import GenericSummary from "./GenericSummary";
+import SocialMediaWidget from "./SocialMediaWidget";
+
 
 export default function Resume() {
     const [data, setData] = useState<ResumeModel | null>(null);
@@ -13,19 +17,30 @@ export default function Resume() {
     useEffect(() => { fetchData() }, []);
 
     return (
-        <main className="container-fluid my-2">
+        <main>
             {!!data &&
                 <>
-                    <header className="d-flex justify-content-between align-items-center">
+                    <Header title={data.name} designation={data.occupation}>
+                        <div className="d-flex align-items-center">
+                            <SocialMediaWidget mediaObjects={data.socialMedia}></SocialMediaWidget>
+                            <ContactUs contactDetails={data.contactDetails}></ContactUs>
+                        </div>
+                    </Header>
+                    {/* <header className="d-flex justify-content-between align-items-center">
                         <h2>{data.name}</h2>
-                        <ContactDetails contactDetails={data.contactDetails}></ContactDetails>
-                    </header>
-    
-                    <div>Skills:</div>
-                    <GenericList list={data.skills} className="badge bg-secondary"></GenericList>
-                    
-                    <div>Work history:</div>
-                    <WorkHistory list={data.workHistory}></WorkHistory>
+                    </header> */}
+
+                    <div className="container">
+                        <GenericSummary title={'Summary'} desc={data.summary}></GenericSummary>
+
+                        <GenericSummary title={'Skills'}>
+                            <GenericList list={data.skills} listClassName="d-flex gap-2 p-0 m-0" className="badge bg-secondary fw-400"></GenericList>
+                        </GenericSummary>
+
+                        <GenericSummary title={'Work History'}>
+                            <WorkHistory list={data.workHistory}></WorkHistory>
+                        </GenericSummary>
+                    </div>
                 </>
             }
         </main>

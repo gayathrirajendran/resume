@@ -1,5 +1,5 @@
 import sammy from './../img/sammy.jpeg';
-import '../css/main.css';
+
 
 export function Welcome() {
     return (
