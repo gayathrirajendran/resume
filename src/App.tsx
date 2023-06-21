@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Resume from "./components/Resume";
 
 export default function App() {

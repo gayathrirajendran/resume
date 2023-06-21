@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './css/main.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import ProfileForm from './components/ProfileForm';
+// import ProfileForm from './components/ProfileForm';
 import ContactUsForm from './components/ContactUsForm';
 
 const router = createBrowserRouter([
@@ -16,10 +16,6 @@ const router = createBrowserRouter([
   {
     path: 'contact-us',
     element: <ContactUsForm />
-  },
-  {
-    path: 'create',
-    element: <ProfileForm />
   },
   {
     path: '*',

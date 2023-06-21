@@ -2,10 +2,10 @@ import { useLocation } from "react-router-dom";
 import { ContactInfoModel } from "../models";
 import { useForm } from "react-hook-form";
 
-const ContactUsForm = (props: any) => {
+const ContactUsForm = () => {
 
     const locationState: { state: ContactInfoModel } = useLocation();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = function (val: any) {
         console.log(val, 'submission');
