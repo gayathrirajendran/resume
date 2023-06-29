@@ -2,13 +2,16 @@ import { Fragment, useState } from "react"
 import { WorkHistoryModel } from "../models"
 import Period from "./Period"
 
+
+
 export function WorkHistory({ list }: { list: Array<WorkHistoryModel> }) {
 
     return (
         <div className="row">
+            {/* <Parent></Parent> */}
             <div className="col-12">
                 {list.map((item, index) =>
-                    <div className={index !== 0 ? 'my-2' : ''} >
+                    <div key={item.org} className={index !== 0 ? 'my-2' : ''} >
                         <WorkHistoryItem key={item.org} historyItem={item} ></WorkHistoryItem>
                     </div>
                 )}
