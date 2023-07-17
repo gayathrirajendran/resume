@@ -6,7 +6,6 @@ import ContactUs from "./ContactUs";
 import Header from "./Header";
 import GenericSummary from "./GenericSummary";
 import SocialMediaWidget from "./SocialMediaWidget";
-import { Link, Outlet } from "react-router-dom";
 
 
 export default function Resume() {
