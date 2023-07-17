@@ -7,7 +7,8 @@ const SocialMediaWidget = ({ mediaObjects }: { mediaObjects: SocialMediaModel[] 
     const networkImageMap: Record<string, string> = {
         "linkedIn": "bi bi-linkedin linkedin-blue",
         "instagram": "bi bi-instagram",
-        "twitter": "bi bi-twitter"
+        "twitter": "bi bi-twitter",
+        "github": "bi bi-github"
     }
 
     const listItems = mediaObjects.map((item: SocialMediaModel) => (
@@ -18,7 +19,7 @@ const SocialMediaWidget = ({ mediaObjects }: { mediaObjects: SocialMediaModel[] 
         </li>
     ))
     return (
-        <ul className="d-flex mx-3 my-0">
+        <ul className="d-flex gap-2 mx-3 my-0">
             {listItems}
         </ul>
     )

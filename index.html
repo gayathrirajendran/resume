@@ -3,14 +3,37 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="manifest" href="./manifest.json">
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Chrome, Firefox OS and Opera -->
+  <!-- <meta name="theme-color" content="#4285f4">  -->
+  <!-- Windows Phone -->
+  <!-- <meta name="msapplication-navbutton-color" content="#4285f4">  -->
+  <!-- iOS Safari -->
+  <!-- <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4"> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
     rel="stylesheet">
   <title>Resume</title>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
+
 </head>
 
 <body>

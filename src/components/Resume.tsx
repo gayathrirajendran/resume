@@ -6,6 +6,7 @@ import ContactUs from "./ContactUs";
 import Header from "./Header";
 import GenericSummary from "./GenericSummary";
 import SocialMediaWidget from "./SocialMediaWidget";
+import { Link, Outlet } from "react-router-dom";
 
 
 export default function Resume() {
@@ -25,6 +26,10 @@ export default function Resume() {
                             <SocialMediaWidget mediaObjects={data.socialMedia}></SocialMediaWidget>
                             <ContactUs contactDetails={data.contactDetails}></ContactUs>
                         </div>
+                        <a className="d-flex mt-2 justify-content-end text-decoration-none" target="_blank" href={import.meta.env.VITE_GOOGLE_MAP}>
+                            <i className="bi bi-geo-alt-fill"></i>
+                            {import.meta.env.VITE_LOCATION}
+                        </a>
                     </Header>
                     {/* <header className="d-flex justify-content-between align-items-center">
                         <h2>{data.name}</h2>
@@ -41,6 +46,9 @@ export default function Resume() {
                             <WorkHistory list={data.workHistory}></WorkHistory>
                         </GenericSummary>
                     </div>
+
+                    {/* <Link to="contact-us" state={data.contactDetails}>Write to us!</Link>
+                    <Outlet></Outlet> */}
                 </>
             }
         </main>
